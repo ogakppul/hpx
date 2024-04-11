@@ -576,7 +576,7 @@ namespace hpx::parallel::execution::detail {
             auto post_policy = hpx::execution::experimental::with_stacksize(
                 policy, threads::thread_stacksize::small_);
             std::size_t start = 0;
-            while (true)
+            while (start < size)
             {
                 auto const stop = start + hierarchical_threshold;
                 if (stop > size)
